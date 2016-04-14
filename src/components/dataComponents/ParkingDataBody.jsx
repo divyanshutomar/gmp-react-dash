@@ -1,10 +1,12 @@
 var React = require('react');
+import {Link} from 'react-router'
+
 
 var ParkingDataBody = React.createClass({
 	render: function () {
 		return (		
 
-
+				<li>
 			      <div className="collapsible-header"><h5><b>{this.props.dataitem.name}</b></h5></div>
 			      <div className="collapsible-body">
 				      <div className="row">
@@ -50,16 +52,14 @@ var ParkingDataBody = React.createClass({
 						      			<dd>{this.props.dataitem.updatedAt}</dd>
 						      		</dl>
 						      	</div>
-
-					      		<this.props.bodyComponent dataitem={this.props.dataitem}/>
 					      	</div>
-						    <a className="waves-effect waves-light btn blue right" >Check Parking Lots</a>
+						    <Link to={`/parkings/${this.props.dataitem.id}/parkinglots`}>
+							<span className="waves-effect waves-light btn blue right" >Check Parking Lots</span>
+							</Link>
 							<div className="clear-fix"></div>		
 				      </div>
 			      </div>
-
-
-	
+			    </li>  
 			);
 	}
 });

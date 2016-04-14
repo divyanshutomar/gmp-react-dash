@@ -9,7 +9,7 @@ var Parkings = React.createClass({
 
 	return(	<div>
 	         <h3>Parkings</h3>
-	         <ListManager url={path.API_end + "Companies/1/parkings"} bodyComponent={ParkingDataBody} />
+	         <ListManager url={path.API_end + "Companies/"+this.props.params.compId+"/parkings"} bodyComponent={ParkingDataBody} />
 	        </div> 
 		);
 	}
