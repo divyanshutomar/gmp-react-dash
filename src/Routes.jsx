@@ -10,10 +10,8 @@ import { createHashHistory } from 'history'
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 
- // render((
-	// 	<Router history={appHistory}>
-	// 		<Route path="/" component={Companies}/>
-	// 	</Router>
-	// ),document.getElementById('mainContainer'))
-
-render(<ParkingSublots/>,document.getElementById('mainContainer'))	
+ render((
+		<Router history={appHistory}>
+			<Route path="/companies" component={Companies}/>
+		</Router>
+	),document.getElementById('mainContainer'));

@@ -6,18 +6,7 @@ var ListItem = React.createClass({
 		return (
 
 		  	<li>
-		      <div className="collapsible-header"><h5><b>{this.props.dataitem.name}</b></h5></div>
-		      <div className="collapsible-body">
-			      <div className="row">
-				      	<div className="card-panel teal  white-text ">
-					      	<a className="waves-effect waves-light btn blue right" >Edit</a>
-							<div className="clear-fix"></div>	
-				      		<this.props.bodyComponent dataitem={this.props.dataitem}/>
-				      	</div>
-					    <a className="waves-effect waves-light btn blue right" >Check Parking Lots</a>
-						<div className="clear-fix"></div>		
-			      </div>
-		      </div>
+				<this.props.bodyComponent dataitem={this.props.dataitem}/>
     		</li>
 
 			);
