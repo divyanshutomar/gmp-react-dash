@@ -51,6 +51,11 @@ var ListManager = React.createClass({
 		this.getDatasetCount();
 	},
 	componentDidMount: function () {
+		$(document).ready(function(){
+            $('.collapsible').collapsible({
+              accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+            });
+          });
 		this.checkPagesBound();
 		this.getDataset(PAGE_SIZE,CurrentPageVal);
 	},
