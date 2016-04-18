@@ -82,7 +82,15 @@ var ParkingLotsDataBody = React.createClass({
 					      		
 					      	</div>
 				      	</div>
-					    <a className="waves-effect waves-light btn blue right" >Check Parking Lots</a>
+					    <Link to={`/parkingsublots/${this.props.dataitem.id}/pricingslots`}>
+							<span className="waves-effect waves-light btn blue right" >Check Pricing Lots</span>
+						</Link>
+						<Link to={`/parkingsublots/${this.props.dataitem.id}/receiptcontents`}>
+							<span className="waves-effect waves-light btn blue right" >Check Receipt Contents</span>
+						</Link>
+						<Link to={`/parkingsublots/${this.props.dataitem.id}/reason`}>
+							<span className="waves-effect waves-light btn blue right" >Check Reason</span>
+						</Link>
 						<div className="clear-fix"></div>		
 			      </div>
 		      </div>
