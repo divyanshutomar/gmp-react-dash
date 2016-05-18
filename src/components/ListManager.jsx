@@ -2,6 +2,7 @@ var React = require('react');
 var List = require('./List.jsx');
 var ReactDOM = require('react-dom');
 var classNames = require('classnames');
+var path = require('../path');
 
 const PAGE_SIZE = 30;
 var CurrentPageVal = 0;
@@ -19,6 +20,9 @@ var ListManager = React.createClass({
 	      url: this.props.url+"/count",
 	      cache: false,
 	      async:false,
+	      headers :{
+	      	Authorization : path.Authorization
+	      },
 	      success: function(data) {
 	        this.setState({datasetCount:data['count']});
 	      }.bind(this),
@@ -31,6 +35,9 @@ var ListManager = React.createClass({
 		$.ajax({
 	      url: this.props.url,
 	      dataType: 'json',
+	      headers :{
+	      	Authorization : path.Authorization
+	      },
 	      data: {
 	      	"filter":
 			      	 {
